@@ -60,7 +60,7 @@ $ docker run -t --rm \
     -e MEILISEARCH_HOST_URL=<your-meilisearch-host-url> \
     -e MEILISEARCH_API_KEY=<your-meilisearch-api-key> \
     -v <absolute-path-to-your-config-file>:/docs-scraper/config.json \
-    getmeili/docs-scraper:v0.9.0 pipenv run ./docs_scraper config.json
+    getmeili/docs-scraper:latest pipenv run ./docs_scraper config.json
 ```
 
 ### In a GitHub Action
@@ -83,7 +83,7 @@ run-scraper:
           -e MEILISEARCH_HOST_URL=$HOST_URL \
           -e MEILISEARCH_API_KEY=$API_KEY \
           -v $CONFIG_FILE_PATH:/docs-scraper/config.json \
-          getmeili/docs-scraper:v0.9.0 pipenv run ./docs_scraper config.json
+          getmeili/docs-scraper:latest pipenv run ./docs_scraper config.json
 ```
 
 Here is the [GitHub Action file](https://github.com/meilisearch/documentation/blob/master/.github/workflows/gh-pages-scraping.yml) we use in production for the MeiliSearch documentation.
